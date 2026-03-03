@@ -1,0 +1,15 @@
+Formica rufa
+Formica pratensis
+Formica sanguinea
+Formica fusca
+Formica cinerea
+Lasius niger
+Lasius flavus
+Lasius emarginatus
+Myrmica rubra
+Myrmica ruginodis
+Myrmica scabrinodis
+Tetramorium caespitum
+Camponotus ligniperda
+Camponotus herculeanus
+Solenopsis fugax
