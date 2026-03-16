@@ -21,7 +21,7 @@ def compare():
 
     # Nové okno pre funkciu
     ro = tk.Tk()
-    ro.title("Porovnanie")
+    ro.title("Comparsion")
     ro.geometry("250x300")
 
     # vytvoríme canvas
@@ -29,7 +29,7 @@ def compare():
     c.pack()
 
     # Hlavný kód funkcie
-    with open("databaza.txt") as file:
+    with open("database.txt") as file:
         with open("text.txt") as f:
             text_data = f.readlines()
             counter2 = 10
