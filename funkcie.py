@@ -22,10 +22,10 @@ def compare():
     # Nové okno pre funkciu
     ro = tk.Tk()
     ro.title("Porovnanie")
-    ro.geometry("150x300")
+    ro.geometry("250x300")
 
     # vytvoríme canvas
-    c = tk.Canvas(ro, width=150, height=300, bg="white")
+    c = tk.Canvas(ro, width=250, height=300, bg="#4c566a")
     c.pack()
 
     # Hlavný kód funkcie
@@ -40,7 +40,7 @@ def compare():
                     if str(druh.lower().replace(" ", "")) == str(y.strip().lower().replace(" ", "")):
                         counter += 1
                 if counter != 0:
-                    c.create_text(75, counter2, text = druh+": "+str(counter))
+                    c.create_text(75, counter2, text = "      "+druh+": "+str(counter))
                     counter2 += 13
 
     c.mainloop()
@@ -49,4 +49,4 @@ def compare():
 # Funkcia na vyčistenie plátna
 def reset(y):
     y.delete("all")
-    y.create_text(150, 10, text="Ahoj!")
+    y.create_text(150, 10, text="Entomology diary")
