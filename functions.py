@@ -1,34 +1,34 @@
 import tkinter as tk
 
-#Funkcia na načítanie textu z textového súboru
+#Function for writting input on canvas
 def read_text(y):
     with open("text.txt") as file:
-        text = file.read()
-    y.create_text(50,30, text=text)
+        textt = file.read()
+    y.create_text(50,30, text=textt)
 
-# Funkcia na zapísanie inputu z pola
+# Function for writting input into text.txt
 def write_text(x):
     text = x.get()
     with open("text.txt", "a", encoding = "utf-8") as file:
         file.write(text+"\n")
 
-# Funkcia na vyčistenie súboru
+# Function for cleaning text.txt
 def clean():
     open("text.txt", "w", encoding = "utf-8")
 
-# Funkcia na porovnanie text.txt s databázou
+# Function for comparing text.txt with database.txt
 def compare():
 
-    # Nové okno pre funkciu
+    # new window for function
     ro = tk.Tk()
     ro.title("Comparsion")
     ro.geometry("250x300")
 
-    # vytvoríme canvas
+    #creatting of canvas
     c = tk.Canvas(ro, width=250, height=300, bg="#4c566a")
     c.pack()
 
-    # Hlavný kód funkcie
+    # Main code of function
     with open("database.txt") as file:
         with open("text.txt") as f:
             text_data = f.readlines()
@@ -46,7 +46,7 @@ def compare():
     c.mainloop()
     ro.mainloop()
 
-# Funkcia na vyčistenie plátna
+# Function of clearing window
 def reset(y):
     y.delete("all")
     y.create_text(150, 10, text="Entomology diary")
