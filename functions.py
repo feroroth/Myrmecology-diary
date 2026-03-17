@@ -1,10 +1,14 @@
 import tkinter as tk
 
 #Function for writting input on canvas
-def read_text(y):
+def read_text(x):
+    y = 40
     with open("text.txt") as file:
-        textt = file.read()
-    y.create_text(50,30, text=textt)
+        x.delete("all")
+        for line in file:
+            line = file.read()
+            x.create_text(150,y, text = line)
+            y += 5
 
 # Function for writting input into text.txt
 def write_text(x):
@@ -12,9 +16,9 @@ def write_text(x):
     with open("text.txt", "a", encoding = "utf-8") as file:
         file.write(text+"\n")
 
-# Function for cleaning text.txt
-def clean():
-    open("text.txt", "w", encoding = "utf-8")
+# Function for cleaning canvas
+def clean(x):
+    x.delete("all")
 
 # Function for comparing text.txt with database.txt
 def compare():
@@ -50,3 +54,4 @@ def compare():
 def reset(y):
     y.delete("all")
     y.create_text(150, 10, text="Entomology diary")
+    

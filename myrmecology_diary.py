@@ -18,12 +18,12 @@ pole.configure(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252", w
 pole.pack()
 
 # Button for writting text
-button = tk.Button(text="Upload", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text(canvas))
+button = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text(canvas))
 button.place(x = 30, y = 250)
 
 # Button for adding text into text.txt
-button1 = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252", command= lambda: functions.write_text(pole))
-button1.place(x = 110, y = 250)
+button1 = tk.Button(text = "Upload", bg = "#4c566a", highlightbackground = "#3b4252", command= lambda: functions.write_text(pole))
+button1.place(x = 100, y = 250)
 
 # Button for clearing text.txt
 button_clean = tk.Button(text = "clean", bg = "#4c566a", highlightbackground = "#3b4252", command = functions.clean)
@@ -44,4 +44,3 @@ canvas.pack(pady=20)
 canvas.create_text(150,10, text="Entomology diary")
 
 window.mainloop()
-canvas.mainloop()
