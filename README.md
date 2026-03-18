@@ -1,7 +1,7 @@
 # MYRMECOLOGY DIARY
 
-- Simple diary for myrmecologists
 >**Work in progress**
+- Simple diary for myrmecologists
 
 ## What is myrmecology?
 **Myrmecology is a study of ant**, Myrmecologists are people who do this.
