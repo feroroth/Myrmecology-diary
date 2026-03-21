@@ -18,7 +18,7 @@ pole.configure(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252", w
 pole.pack()
 
 # Button for writting text
-button = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text(canvas))
+button = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text())
 button.place(x = 30, y = 250)
 
 # Button for adding text into text.txt

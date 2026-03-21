@@ -1,14 +1,27 @@
 import tkinter as tk
 
 #Function for writting input on canvas
-def read_text(x):
-    y = 40
+def read_text():
+
+    # new window for function
+    ro = tk.Tk()
+    ro.title("Comparsion")
+    ro.geometry("250x300")
+
+    #creatting of canvas
+    c = tk.Canvas(ro, width=300, height=300, bg="#4c566a")
+    c.pack()
+
+    y = 150
     with open("text.txt") as file:
-        x.delete("all")
+        c.delete("all")
         for line in file:
             line = file.read()
-            x.create_text(150,y, text = line)
+            c.create_text(100,y, text = line)
             y += 5
+
+    c.mainloop()
+    ro.mainloop()
 
 # Function for writting input into text.txt
 def write_text(x):
