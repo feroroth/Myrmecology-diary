@@ -4,7 +4,7 @@ import functions
 
 # Creatting Window
 window = tk.Tk()
-window.title("Entomologický denník") # Popis okna
+window.title("Myrmecology diary") # Popis okna
 window.geometry("350x350")
 window.configure(bg = "#4c566a", highlightbackground = "#4c566a")
 
