@@ -54,17 +54,21 @@ def compare():
         with open("text.txt") as f:
             text_data = f.readlines()
             counter2 = 10
+            
+            for druh in file.readlines():
+                druh = druh.strip()
+                counter = 0
 
-            for y in text_data:
-                slova_druh = druh.lower().split()[:2]
-                slova_y = y.strip().lower().split()[:2]
+                for y in text_data:
+                    slova_druh = druh.lower().split()[:2]
+                    slova_y = y.strip().lower().split()[:2]
 
-                if slova_druh == slova_y:
-                    counter += 1
+                    if slova_druh == slova_y:
+                        counter += 1
 
-            if counter != 0:
-                c.create_text(75, counter2, text="      " + druh + ": " + str(counter))
-                counter2 += 13
+                if counter != 0:
+                    c.create_text(75, counter2, text="      " + druh + ": " + str(counter))
+                    counter2 += 13
 
     c.mainloop()
     ro.mainloop()
