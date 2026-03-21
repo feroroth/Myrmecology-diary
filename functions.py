@@ -67,4 +67,5 @@ def compare():
 def reset(y):
     y.delete("all")
     y.create_text(150, 10, text="Entomology diary")
+    open("text.txt", "w").close()
     
