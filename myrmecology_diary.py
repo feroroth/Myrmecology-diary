@@ -17,12 +17,24 @@ pole=tk.Entry()
 pole.configure(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252", width = 40)
 pole.pack()
 
+# list of variables for Dropdown menu
+days = [i + 1 for i in range(31)]
+months = ["January", "February", "March", "April", "May", "June", "July", "August", "Septeber", "October", "November", "December"]
+
+# Setting variables
+opt1 = tk.StringVar(value = "January")
+opt2 = tk.IntVar(value = 1)
+
+# Dropdown menu
+tk.OptionMenu(window, opt1, *months).pack()
+tk.OptionMenu(window, opt2, *days).pack()
+
 # Button for writting text
 button = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text())
 button.place(x = 30, y = 250)
 
 # Button for adding text into text.txt
-button1 = tk.Button(text = "Upload", bg = "#4c566a", highlightbackground = "#3b4252", command= lambda: functions.write_text(pole))
+button1 = tk.Button(text = "Upload", bg = "#4c566a", highlightbackground = "#3b4252", command= lambda: functions.write_text(pole, opt1, opt2))
 button1.place(x = 100, y = 250)
 
 # Button for clearing text.txt
@@ -34,13 +46,12 @@ button_counter = tk.Button(text= "counter", bg = "#4c566a", highlightbackground 
 button_counter.place(x = 250, y = 250)
 
 
-button_reset = tk.Button(text = "reset", bg = "#3b4252", highlightbackground = "#3b4252", command = lambda: functions.reset(canvas))
+button_reset = tk.Button(text = "reset", bg = "#3b4252", highlightbackground = "#3b4252", command = lambda: functions.reset())
 button_reset.place(x = 150, y = 290)
 
 # Creatting Canvas
 canvas = tk.Canvas(window, width=300, height=150, bg = "#4c566a", highlightbackground = "#4c566a")
 canvas.pack(pady=20)
 
-canvas.create_text(150,10, text="Entomology diary")
 
 window.mainloop()

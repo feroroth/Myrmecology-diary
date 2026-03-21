@@ -9,7 +9,7 @@ def read_text():
     ro.geometry("250x300")
 
     #creatting of canvas
-    c = tk.Canvas(ro, width=300, height=300, bg="#4c566a")
+    c = tk.Canvas(ro, width=400, height=400, bg="#4c566a")
     c.pack()
 
     y = 150
@@ -17,21 +17,25 @@ def read_text():
         c.delete("all")
         for line in file:
             line = file.read()
-            c.create_text(100,y, text = line)
+            c.create_text(120,y, text = line)
             y += 5
 
     c.mainloop()
     ro.mainloop()
 
 # Function for writting input into text.txt
-def write_text(x):
+def write_text(x, y, z):
+
+    # getting variables from dropdown menu and pole
     text = x.get()
+    text_month = str(y.get())
+    text_day = str(z.get())
     with open("text.txt", "a", encoding = "utf-8") as file:
-        file.write(text+"\n")
+        file.write(text+" "+text_day+". "+text_month+". "+"\n")
 
 # Function for cleaning canvas
-def clean(x):
-    x.delete("all")
+def clean():
+    open("text.txt", "w").close()
 
 # Function for comparing text.txt with database.txt
 def compare():
@@ -50,15 +54,17 @@ def compare():
         with open("text.txt") as f:
             text_data = f.readlines()
             counter2 = 10
-            for druh in file.readlines():
-                druh = druh.strip()
-                counter = 0
-                for y in text_data:
-                    if str(druh.lower().replace(" ", "")) == str(y.strip().lower().replace(" ", "")):
-                        counter += 1
-                if counter != 0:
-                    c.create_text(75, counter2, text = "      "+druh+": "+str(counter))
-                    counter2 += 13
+
+            for y in text_data:
+                slova_druh = druh.lower().split()[:2]
+                slova_y = y.strip().lower().split()[:2]
+
+                if slova_druh == slova_y:
+                    counter += 1
+
+            if counter != 0:
+                c.create_text(75, counter2, text="      " + druh + ": " + str(counter))
+                counter2 += 13
 
     c.mainloop()
     ro.mainloop()
@@ -66,6 +72,5 @@ def compare():
 # Function of clearing window
 def reset(y):
     y.delete("all")
-    y.create_text(150, 10, text="Entomology diary")
     open("text.txt", "w").close()
     
