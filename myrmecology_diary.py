@@ -4,7 +4,7 @@ import functions
 
 # Creatting Window
 window = tk.Tk()
-window.title("Myrmecology diary") # Popis okna
+window.title("Myrmecology diary")
 window.geometry("350x300")
 window.configure(bg = "#4c566a", highlightbackground = "#4c566a")
 
@@ -26,12 +26,16 @@ opt1 = tk.StringVar(value = "January")
 opt2 = tk.IntVar(value = 1)
 
 # Dropdown menu
-tk.OptionMenu(window, opt1, *months).place(x = 75, y = 30)
-tk.OptionMenu(window, opt2, *days).place(x = 15, y = 30)
+option1 = tk.OptionMenu(window, opt1, *months)
+option1.config(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252")
+option1.place(x = 75, y = 30)
+option2 = tk.OptionMenu(window, opt2, *days)
+option2.config(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252")
+option2.place(x = 15, y = 30)
 
 # Button for writting text
-button = tk.Button(text = "Write", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text())
-button.place(x = 30, y = 250)
+button = tk.Button(text = "Ants", bg = "#4c566a", highlightbackground = "#3b4252",  command= lambda:  functions.read_text())
+button.place(x = 35, y = 250)
 
 # Button for adding text into text.txt
 button1 = tk.Button(text = "Upload", bg = "#4c566a", highlightbackground = "#3b4252", command= lambda: functions.write_text(pole, opt1, opt2))
