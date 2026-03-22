@@ -18,11 +18,10 @@ def read_text():
     scrollbar.pack(side = "right", fill = "y")
 
     #creatting of canvas
-    c = tk.Canvas(ro, width=400, height=400, bg="#4c566a", yscrollcommand=scrollbar.set)
+    c = tk.Canvas(frame, width=400, height=400, bg="#4c566a", yscrollcommand=scrollbar.set)
     c.pack(side = "left", fill = "both", expand = True)
 
     scrollbar.config(command = c.yview)
-    c.config(scrollregion=c.bbox("all"))
 
     y = 20
 
@@ -32,6 +31,9 @@ def read_text():
         for line in file:
             c.create_text(5, y, text = line.strip(), anchor = "w")
             y += 20
+
+    # scrollregion
+    c.config(scrollregion = c.bbox("all"))
 
     ro.mainloop()
 
