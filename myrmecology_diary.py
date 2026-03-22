@@ -14,7 +14,7 @@ ikona = ImageTk.PhotoImage(img)
 window.iconphoto(True, ikona)
 
 pole=tk.Entry()
-pole.configure(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252", width = 40)
+pole.config(bg = "#4c566a" , fg = "white", highlightbackground = "#3b4252", width = 40)
 pole.pack()
 
 # list of variables for Dropdown menu
