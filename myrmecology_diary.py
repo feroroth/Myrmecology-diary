@@ -5,7 +5,7 @@ import functions
 # Creatting Window
 window = tk.Tk()
 window.title("Myrmecology diary") # Popis okna
-window.geometry("350x350")
+window.geometry("350x300")
 window.configure(bg = "#4c566a", highlightbackground = "#4c566a")
 
 # Creatting icon
@@ -44,14 +44,5 @@ button_clean.place(x = 180, y = 250)
 # Button for counting a species
 button_counter = tk.Button(text= "counter", bg = "#4c566a", highlightbackground = "#3b4252" , command = lambda: functions.compare())
 button_counter.place(x = 250, y = 250)
-
-
-button_reset = tk.Button(text = "reset", bg = "#3b4252", highlightbackground = "#3b4252", command = lambda: functions.reset())
-button_reset.place(x = 150, y = 290)
-
-# Creatting Canvas
-#canvas = tk.Canvas(window, width=300, height=150, bg = "#4c566a", highlightbackground = "#4c566a")
-#canvas.pack(pady=20)
-
 
 window.mainloop()

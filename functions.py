@@ -24,14 +24,14 @@ def read_text():
     scrollbar.config(command = c.yview)
     c.config(scrollregion=c.bbox("all"))
 
-    y = 150
+    y = 20
+
+    # For cycle for creatting text 
     with open("text.txt") as file:
         c.delete("all")
         for line in file:
-            line = file.read()
-            c.create_text(120,y, text = line)
-            y += 5
-
+            c.create_text(5, y, text = line.strip(), anchor = "w")
+            y += 20
 
     ro.mainloop()
 
@@ -43,7 +43,7 @@ def write_text(x, y, z):
     text_month = str(y.get())
     text_day = str(z.get())
     with open("text.txt", "a", encoding = "utf-8") as file:
-        file.write(text+" "+text_day+". "+text_month+". "+"\n")
+        file.write(text+" "+text_day+". "+text_month+"\n")
 
 # Function for cleaning canvas
 def clean():
@@ -85,8 +85,4 @@ def compare():
     c.mainloop()
     ro.mainloop()
 
-# Function of clearing window
-def reset(y):
-    y.delete("all")
-    open("text.txt", "w").close()
-    
+
