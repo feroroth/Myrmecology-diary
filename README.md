@@ -30,3 +30,8 @@ It is also simple app which is just designed to do simple job with text files an
     - linux Fedora and Ubuntu (sudo dnf/apt-get install python3-tk)
 - **python3-pillow-tk**, sudo dnf/apt install python3-pillow-tk for fedora/ubuntu linux
 
+## Screenshots
+
+![screenshot of main window](images/Main_window.png)
+![screenshot of ants window](images/Ants_window.png)
+![screenshot of comparsion window](images/Comparsion_window.png)

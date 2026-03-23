@@ -81,7 +81,7 @@ def compare():
                         counter += 1
 
                 if counter != 0:
-                    c.create_text(75, counter2, text="      " + specie + ": " + str(counter))
+                    c.create_text(250/2, counter2, text="      " + specie + ": " + str(counter))
                     counter2 += 13
 
     c.mainloop()
