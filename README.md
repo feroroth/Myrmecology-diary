@@ -32,6 +32,8 @@ It is also simple app which is just designed to do simple job with text files an
 
 ## Screenshots
 
-![screenshot of main window](images/Main_window.png)
-![screenshot of ants window](images/Ants_window.png)
-![screenshot of comparsion window](images/Comparsion_window.png)
+<p align="center">
+  <img src="images/Main_window.png" alt="Main window" width="250">
+  <img src="images/Ants_window.png" alt="Ants window" width="250">
+  <img src="images/Comparsion_window.png" alt="Comparsion window" width="250">
+</p>
