@@ -17,7 +17,7 @@ It works by storing data of caught ant into .txt files, so it stay even after co
 - and fourth counter which creates **separate window** and makes a list of caught ant
 For counting it uses databaza.txt, it should have **list of species from your location**, it won't work without it. 
 
-## Why is it helpful? 
+## Why it could be helpful? 
 Ants have special times when they have nuptial flights and it's for every species individual. In my opinion it's practical to have stored data about it for my specific location bc for same specie it might be different in Slovak mountain than in Italy.
 It is also simple app which is just designed to do simple job with text files and can be used in **different spheres**
 
